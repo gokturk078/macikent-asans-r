@@ -1,0 +1,572 @@
+/* ===================================
+   MAVIKENT ASANSÖR - RESPONSIVE STYLES
+   =================================== */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero-title {
+        font-size: 5rem;
+    }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (max-width: 1439px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certificates-slider {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    :root {
+        --fs-6xl: 3rem;
+        --fs-5xl: 2.5rem;
+        --fs-4xl: 2rem;
+        --fs-3xl: 1.75rem;
+    }
+
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: var(--primary);
+        padding: var(--space-4xl) var(--space-xl);
+        transition: var(--transition-base);
+        z-index: var(--z-modal);
+    }
+
+    .nav-menu.show {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xl);
+    }
+
+    .nav-link {
+        font-size: var(--fs-xl);
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-close {
+        display: block;
+    }
+
+    .nav-phone span {
+        display: none;
+    }
+
+    .nav-phone {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        justify-content: center;
+        border-radius: var(--radius-full);
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: var(--fs-5xl);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Trust Bar */
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xl);
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-content .section-tag,
+    .about-content .section-title,
+    .about-content .section-subtitle {
+        text-align: center;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-features {
+        display: inline-block;
+        text-align: left;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Bento Grid */
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento-large {
+        grid-column: span 1;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Process */
+    .process-timeline {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .process-timeline::before {
+        display: none;
+    }
+
+    /* Technology */
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .tech-image img {
+        height: 350px;
+    }
+
+    .tech-content .section-tag,
+    .tech-content .section-title {
+        text-align: center;
+    }
+
+    .tech-content>p {
+        text-align: center;
+    }
+
+    /* Certificates */
+    .certificates-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonials */
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+}
+
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
+    :root {
+        --fs-6xl: 2.5rem;
+        --fs-5xl: 2rem;
+        --fs-4xl: 1.75rem;
+        --fs-3xl: 1.5rem;
+        --fs-2xl: 1.25rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .section {
+        padding: var(--space-2xl) 0;
+    }
+
+    /* Navigation */
+    .nav {
+        height: 70px;
+    }
+
+    .nav-logo {
+        font-size: var(--fs-base);
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: var(--fs-sm);
+    }
+
+    .dark-mode-toggle {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 100vh;
+        padding-top: 70px;
+    }
+
+    .hero-content {
+        padding: var(--space-2xl) 0;
+    }
+
+    .hero-badge {
+        font-size: var(--fs-xs);
+        padding: var(--space-xs) var(--space-md);
+    }
+
+    .hero-title {
+        font-size: var(--fs-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--fs-base);
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    /* Trust Bar */
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .trust-icon {
+        width: 50px;
+        height: 50px;
+        font-size: var(--fs-lg);
+    }
+
+    .trust-number {
+        font-size: var(--fs-2xl);
+    }
+
+    .trust-label {
+        font-size: var(--fs-xs);
+    }
+
+    /* Section Headers */
+    .section-title {
+        font-size: var(--fs-2xl);
+    }
+
+    /* About */
+    .about-image img {
+        height: 300px;
+    }
+
+    .about-badge {
+        left: var(--space-md);
+        bottom: var(--space-md);
+        padding: var(--space-md);
+    }
+
+    .badge-number {
+        font-size: var(--fs-2xl);
+    }
+
+    /* Services */
+    .service-card {
+        padding: var(--space-lg);
+    }
+
+    .service-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Bento Grid */
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-item {
+        padding: var(--space-lg);
+    }
+
+    /* Portfolio */
+    .portfolio-filters {
+        gap: var(--space-sm);
+    }
+
+    .filter-btn {
+        padding: var(--space-xs) var(--space-md);
+        font-size: var(--fs-sm);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item {
+        aspect-ratio: 4/3;
+    }
+
+    /* Process */
+    .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .process-content {
+        padding: var(--space-md);
+    }
+
+    .process-icon {
+        width: 40px;
+        height: 40px;
+        font-size: var(--fs-base);
+    }
+
+    .process-content h3 {
+        font-size: var(--fs-xs);
+    }
+
+    .process-content p {
+        display: none;
+    }
+
+    /* Technology */
+    .tech-image img {
+        height: 250px;
+    }
+
+    .tech-features {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certificates */
+    .certificates-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+        padding: var(--space-lg);
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: var(--space-lg);
+    }
+
+    /* FAQ */
+    .faq-question {
+        padding: var(--space-md);
+        font-size: var(--fs-sm);
+    }
+
+    .faq-answer p {
+        padding: 0 var(--space-md) var(--space-md);
+        font-size: var(--fs-sm);
+    }
+
+    /* Contact */
+    .contact-form-wrapper {
+        padding: var(--space-lg);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-icon {
+        margin: 0 auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-md);
+    }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+        right: var(--space-md);
+        bottom: var(--space-md);
+        padding: var(--space-md);
+    }
+
+    .whatsapp-float span {
+        display: none;
+    }
+
+    .whatsapp-float i {
+        font-size: var(--fs-2xl);
+    }
+
+    /* Back to Top */
+    .back-to-top {
+        left: var(--space-md);
+        bottom: calc(var(--space-md) + 60px);
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Cookie Consent */
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cookie-content p {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+}
+
+/* Extra Small Mobile (320px) */
+@media (max-width: 374px) {
+    .hero-title {
+        font-size: var(--fs-3xl);
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .header,
+    .whatsapp-float,
+    .back-to-top,
+    .cookie-consent,
+    .scroll-progress {
+        display: none !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: var(--space-xl) 0;
+    }
+
+    .section {
+        padding: var(--space-lg) 0;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #000;
+        --secondary: #00A0C0;
+        --accent: #D9A500;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--space-4xl) 0;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+}
