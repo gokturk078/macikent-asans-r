@@ -51,6 +51,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -985,23 +990,98 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/902526120099?text=Merhaba,%20asansör%20hizmetleri%20hakkında%20bilgi%20almak%20istiyorum."
-        class="whatsapp-float" target="_blank" aria-label="WhatsApp ile iletişim">
-        <i class="fab fa-whatsapp"></i>
-        <span>Hemen Ara</span>
-    </a>
-
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Yukarı Git">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- ===================================
+         CHATBOT WIDGET
+         =================================== -->
+    <!-- Chatbot Trigger Button -->
+    <button class="chatbot-trigger" id="chatbot-trigger" aria-label="Chatbot'u Aç">
+        <span class="chatbot-badge" style="display: none;">1</span>
+        <svg class="chatbot-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+    </button>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container" id="chatbot-container">
+        <!-- Chatbot Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-header-content">
+                <div class="chatbot-avatar">
+                    🏢
+                    <span class="online-indicator"></span>
+                </div>
+                <div class="chatbot-header-text">
+                    <h3>Mavikent Asansör</h3>
+                    <div class="chatbot-status">
+                        <div class="typing-dots">
+                            <span class="typing-dot"></span>
+                            <span class="typing-dot"></span>
+                            <span class="typing-dot"></span>
+                        </div>
+                        <span>Çevrimiçi</span>
+                    </div>
+                </div>
+            </div>
+            <button class="chatbot-close" id="chatbot-close" aria-label="Chatbot'u Kapat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Chatbot Messages -->
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+
+        <!-- Chatbot Input -->
+        <div class="chatbot-input-wrapper">
+            <input 
+                type="text" 
+                class="chatbot-input" 
+                id="chatbot-input"
+                placeholder="Mesajınızı yazın..."
+                maxlength="500"
+                autocomplete="off"
+            />
+            <button class="chatbot-send-btn" id="chatbot-send" aria-label="Mesaj Gönder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Chatbot Footer -->
+        <div class="chatbot-footer">
+            <p class="chatbot-footer-text">
+                Powered by <a href="#">Mavikent Asansör</a>
+            </p>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/form.js"></script>
+    
+    <!-- EmailJS Configuration (Replace with your credentials) -->
+    <script>
+        // EmailJS'i başlat - kendi public key'inizi buraya ekleyin
+        // emailjs.init("YOUR_PUBLIC_KEY");
+        
+        // Form ayarlarını yapılandır (opsiyonel)
+        // configureEmailJS('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', 'YOUR_PUBLIC_KEY');
+    </script>
 </body>
 
 </html>
